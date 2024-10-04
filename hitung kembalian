@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class App {
+    public static void main(String[] args) {
+        Scanner inputan = new Scanner(System.in);
+        
+        System.out.print("Jumlah uang yang diberikan: ");
+        double jumlahUangYangDiberikan = inputan.nextDouble();
+        
+        System.out.print("Jumlah telur (kg): ");
+        double jumlahTelurPerKilo = inputan.nextDouble();
+
+        double hargaPerKilo = 28000;
+        double totalBayar = hargaPerKilo * jumlahTelurPerKilo;
+        double uangKembalian = jumlahUangYangDiberikan - totalBayar;
+
+
+        System.out.printf("Total bayar: %.0f%n", totalBayar);
+        System.out.printf("Uang yang diberikan: %.0f%n", jumlahUangYangDiberikan);
+        System.out.printf("Uang kembalian: %.0f%n", uangKembalian);
+        inputan.close();
+    }
+}
